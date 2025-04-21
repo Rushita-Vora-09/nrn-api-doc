@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "639ea93e-5888-4bc5-a341-b680ac500e65",
+		"name": "Case Feed Item",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42996847",
+		"_collection_link": "https://universal-meteor-694819.postman.co/workspace/New-Team-Workspace~8cc01f54-b4e0-4ffe-b0bc-a8dc63618b5e/collection/25034877-639ea93e-5888-4bc5-a341-b680ac500e65?action=share&source=collection_link&creator=42996847"
+	},
+	"item": [
+		{
+			"name": "Case Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "00DBm000005hIZt!AQEAQNnpF3yc9NLXZcpnSg0aKGITzYeTuiHtpC9oSbDTRePY68VLp12yj.IDkPDi9NkiW.UB4Ujiie__RA5LHQcb1Ws9HLBy",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"contactId\": \"\",\n  \"accountId\": \"\",\n  \"parentId\": \"\",\n  \"suppliedName\": \"John Doe\",\n  \"suppliedEmail\": \"john.doe@example.com\",\n  \"suppliedPhone\": \"+1234567890\",\n  \"suppliedCompany\": \"Example Inc.\",\n  \"type\": \"Technical Issue\",\n  \"status\": \"Open\",\n  \"reason\": \"Warranty Claim\",\n  \"origin\": \"Email\",\n  \"subject\": \"Issue with Solar Panel\",\n  \"priority\": \"High\",\n  \"descriptionDeadline\": \"2025-01-15T10:30:00Z\",\n  \"comments\": \"Customer reported intermittent issues.\",\n  \"installation\": \"\",\n  \"caseType\": \"Site Issue\",\n  \"site\": \"\",\n  \"rmaNumberWarrantyClaimRef\": \"RMA-09876\",\n  \"warrantyClaimDate\": \"2025-01-01\",\n  \"warrantyClaimComponent\": \"Fuse\",\n  \"scheduledRectificationDate\": \"2025-01-20\",\n  \"deadline\": \"2025-01-25\",\n  \"deptType\": \"Operational / Physical Issue\",\n  \"solarAffected\": \"true\",\n  \"batteryAffected\": \"true\",\n  \"meteringAffected\": \"true\",\n  \"commsAffected\": \"true\",\n  \"recommendedStatus\": \"New\",\n  \"nextStepsActions\": \"Schedule technician visit\",\n  \"lastActivityTime\": \"2025-01-06 14:00:00\",\n  \"systemFaultStartDate\": \"2025-01-06 14:00:00\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nrn--mvc4.sandbox.my.salesforce.com/services/apexrest/casecreate",
+					"protocol": "https",
+					"host": [
+						"nrn--mvc4",
+						"sandbox",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"apexrest",
+						"casecreate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

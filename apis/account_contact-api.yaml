@@ -1,0 +1,30 @@
+openapi: 3.0.0
+info:
+  title: account_contact_doc
+  version: 1.0.0
+servers:
+  - url: https://nrn--mvc4.sandbox.my.salesforce.com
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+paths:
+  /services/apexrest/Contentfiledata/0699p000008xiOdAAI:
+    get:
+      tags:
+        - default
+      summary: content version get Copy
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}

@@ -1,0 +1,68 @@
+openapi: 3.0.0
+info:
+  title: Case Feed Item
+  version: 1.0.0
+servers:
+  - url: https://nrn--mvc4.sandbox.my.salesforce.com
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+paths:
+  /services/apexrest/casecreate:
+    post:
+      tags:
+        - default
+      summary: Case Create
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                contactId: ''
+                accountId: ''
+                parentId: ''
+                suppliedName: John Doe
+                suppliedEmail: john.doe@example.com
+                suppliedPhone: '+1234567890'
+                suppliedCompany: Example Inc.
+                type: Technical Issue
+                status: Open
+                reason: Warranty Claim
+                origin: Email
+                subject: Issue with Solar Panel
+                priority: High
+                descriptionDeadline: '2025-01-15T10:30:00Z'
+                comments: Customer reported intermittent issues.
+                installation: ''
+                caseType: Site Issue
+                site: ''
+                rmaNumberWarrantyClaimRef: RMA-09876
+                warrantyClaimDate: '2025-01-01'
+                warrantyClaimComponent: Fuse
+                scheduledRectificationDate: '2025-01-20'
+                deadline: '2025-01-25'
+                deptType: Operational / Physical Issue
+                solarAffected: 'true'
+                batteryAffected: 'true'
+                meteringAffected: 'true'
+                commsAffected: 'true'
+                recommendedStatus: New
+                nextStepsActions: Schedule technician visit
+                lastActivityTime: '2025-01-06 14:00:00'
+                systemFaultStartDate: '2025-01-06 14:00:00'
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
