@@ -23,8 +23,8 @@ paths:
               example:
                 name: Parent Notification 222
                 message: Holds child notifications 222
-                opportunity: 0069p00000F9NMXAA3
-                contact: 0039p00000SyJ7hAAF
+                opportunity: 006Bm00000IpySnIAJ
+                contact: 003Bm00000WDCowIAH
                 type: Notification
                 status: Pending
       security:
